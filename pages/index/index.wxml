@@ -1,0 +1,233 @@
+<cu-custom bgColor="bg-gray">
+  <view slot="content">我的</view>
+</cu-custom>
+
+
+<button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='cu-btn round bg-green shadow'> 获取头像昵称 </button>
+  <view wx:else class="cu-card">
+    <view class="bg-white">
+      <view class="flex solid-bottom padding align-start">
+        <view class="bg-white padding-lg margin-xs radius">
+          <view class="cu-avatar xl round solids" style="background-image:url({{userInfo.avatarUrl}})"></view>
+          <view >{{userInfo.nickName}}</view>
+        </view>
+      </view>
+      <scroll-view scroll-x class="bg-white nav">
+        <view class="flex text-center">
+          <view class="cu-item flex-sub {{index==TabCur?'text-orange cur':''}}" wx:for="{{tar_title}}" wx:key bindtap="tabSelect" data-id="{{index}}">
+            {{item}}
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+<view>
+<block wx:if="{{temp==0}}">
+  
+
+  <view class="cu-card article {{isCard?'no-card':''}}">
+    
+    <view class="cu-item shadow">
+      <view class="cu-timeline">
+        <view class="cu-time">2020-10-5</view>  
+        <view class="cu-item text-orange">
+        <view class="bg-orgen content">
+          <text>12:00</text> 回学校！
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="cu-item shadow">
+      <view class="cu-timeline">
+        <view class="cu-time">2020-10-4</view>
+        <view class="cu-item text-orange">
+        <view class="bg-orgen content">
+        <text>10:00</text> 南沙游艇会
+      </view>
+      <view class="bg-orgen content">
+        <text>19:00</text> 南沙客运港地铁站
+      </view>
+    </view>
+  </view>
+</view>
+
+  <view class="cu-item shadow">
+      <view class="cu-timeline">
+        <view class="cu-time">2020-10-3</view>
+  <view class="cu-item text-orange">
+    <view class="bg-orgen content">
+      <text>10:00</text> 蒲州花园
+    </view>
+    <view class="bg-orgen content">
+      <text>12:00</text> 南沙大角山滨海公园
+    </view>
+    <view class="bg-orgen content">
+      <text>12:00</text> 南沙大角山滨海公园
+    </view>
+  </view>
+    </view>
+  </view>
+</view>
+  
+
+
+</block>
+
+<block wx:elif="{{temp==1}}" >
+  <view class="card-menu margin-top">
+  <view class="cu-timeline">
+    <view class="cu-time">06-17</view>
+    <view class="cu-item">
+      <view class="content">
+        <text>01:30</text> 【喵星】 MX-12138 已揽收，准备发往银河系
+      </view>
+    </view>
+  </view>
+
+  <view class="cu-timeline">
+    <view class="cu-time">06-17</view>
+    <view class="cu-item">
+      <view class="content">
+        <text>01:30</text> 【喵星】 MX-12138 已揽收，准备发往银河系
+      </view>
+    </view>
+  </view>
+</view>
+</block>
+
+<block wx:elif="{{temp==2}}">
+  <scroll-view scroll-x class="bg-white nav">
+        <view class="flex text-center">
+          <view class="cu-item flex-sub {{index==TabCur_1?'text-orange cur':''}}" wx:for="{{tar_title_1}}" wx:key bindtap="tabSelect_1" data-id="{{index}}">
+            {{item}}
+          </view>
+        </view>
+    </scroll-view>
+  <view wx:if="{{collect_temp==0}}" class="cu-card article {{isCard?'no-card':''}}">
+  <view class="cu-item shadow">
+    <view class="title">
+      <view class="text-cut">蒲州花园</view>
+    </view>
+    <view class="content">
+      <image src="../../images/3.jpg" mode="aspectFill"></image>
+      <view class="desc">
+        <view class="text-content"> 蒲洲花园是南沙花园式城市的一个组成部分，苏州园林式风格。位于南沙新城东部，南靠大角山，北倚蒲洲山。</view>
+        <view>
+          <view class="cu-tag bg-red light sm round">南沙区</view>
+          <view class="cu-tag bg-green light sm round">户外</view>
+        </view>
+      </view>
+    </view>
+    <view class="text-gray text-sm text-right padding">
+      <text class="cuIcon-attentionfill margin-lr-xs"></text> 10
+      <text class="cuIcon-appreciatefill margin-lr-xs"></text> 20
+      <text class="cuIcon-messagefill margin-lr-xs"></text> 30
+    </view>
+  </view>
+
+  <view class="cu-item shadow">
+    <view class="title">
+      <view class="text-cut">南沙游艇会</view>
+    </view>
+    <view class="content">
+      <image src="../../images/1.jpg" mode="aspectFill"></image>
+      <view class="desc">
+        <view class="text-content"> 南沙游艇会是广州南沙区政府与霍英东集团携手开发的高端游艇会项目，是中国内地首家获英国游艇码头协会颁发“五金锚奖”的游艇会。</view>
+        <view>
+          <view class="cu-tag bg-red light sm round">南沙区</view>
+          <view class="cu-tag bg-green light sm round">户外</view>
+        </view>
+      </view>
+    </view>
+    <view class="text-gray text-sm text-right padding">
+      <text class="cuIcon-attentionfill margin-lr-xs"></text> 10
+      <text class="cuIcon-appreciatefill margin-lr-xs"></text> 20
+      <text class="cuIcon-messagefill margin-lr-xs"></text> 30
+    </view>
+  </view>
+
+  <view class="cu-item shadow">
+    <view class="title">
+      <view class="text-cut">南沙海滨公园</view>
+    </view>
+    <view class="content">
+      <image src="../../images/2.jpg" mode="aspectFill"></image>
+      <view class="desc">
+        <view class="text-content"> 滨海湿地景区位于公园的北部有相对独立的水体空间，它通过公园西部的水道与公园外的江海联系在一起，随着外江的潮水变化，内湖的水位也会随着变化，这便是滨海湿地景区。该景区主要表现以红树林及水生植物为主(水杉、落羽杉、池杉等)的滨水湿地植物景观，由百花岛、千岛湖、七彩水森林组成。</view>
+        <view>
+          <view class="cu-tag bg-red light sm round">南沙区</view>
+          <view class="cu-tag bg-green light sm round">户外</view>
+        </view>
+      </view>
+    </view>
+    <view class="text-gray text-sm text-right padding">
+      <text class="cuIcon-attentionfill margin-lr-xs"></text> 10
+      <text class="cuIcon-appreciatefill margin-lr-xs"></text> 20
+      <text class="cuIcon-messagefill margin-lr-xs"></text> 30
+    </view>
+  </view>
+
+
+</view>
+</block>
+
+<block wx:elif="{{temp==3}}">
+  <view class="cu-list menu {{menuBorder?'sm-border':''}} {{menuCard?'card-menu margin-top':''}} card-menu margin-top">
+    <view class="cu-item">
+      <view class="content padding-tb-sm">
+        <view>
+          <text class="cuIcon-clothesfill text-blue margin-right-xs"></text> 
+          1
+        </view>
+          <view class="text-gray text-sm">
+          <text class="cuIcon-infofill margin-right-xs"></text> 
+          多喝热水！
+        </view>
+      </view>
+      <view class="action">
+        <switch class="switch-sex sm" bindchange="switchSex"></switch>
+      </view>
+    </view>
+
+    <view class="cu-item">
+      <view class="content padding-tb-sm">
+        <view>
+          <text class="cuIcon-clothesfill text-blue margin-right-xs"></text> 
+          2
+        </view>
+          <view class="text-gray text-sm">
+          <text class="cuIcon-infofill margin-right-xs"></text> 
+          多喝开水！
+        </view>
+      </view>
+      <view class="action">
+        <switch class="switch-sex sm" bindchange="switchSex"></switch>
+      </view>
+    </view>
+
+    <view class="cu-item">
+      <view class="content padding-tb-sm">
+        <view>
+          <text class="cuIcon-clothesfill text-blue margin-right-xs"></text> 
+          3
+        </view>
+          <view class="text-gray text-sm">
+          <text class="cuIcon-infofill margin-right-xs"></text> 
+          多喝烫水！
+        </view>
+      </view>
+      <view class="action">
+        <switch class="switch-sex sm" bindchange="switchSex"></switch>
+      </view>
+    </view>
+  </view>
+
+</block>
+</view>
+
+
+
+
+
+

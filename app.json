@@ -1,0 +1,72 @@
+{
+  "pages": [
+    "pages/first/first",
+    "pages/index/index",
+    "pages/home/home",
+    "pages/search/search",
+    "pages/local_charac/local_charac",
+    "pages/restaurant/restaurant",
+    "pages/afternoon_tea/afternoon_tea",
+    "pages/hotel/hotel",
+    "pages/ranking_list/ranking_list",
+    "pages/message/message"
+  ],
+
+  "plugins": {
+    "routePlan": {
+    "version": "1.0.8",
+    "provider": "wx50b5593e81dd937a"
+    },
+    "subway": {
+      "version": "1.0.9",
+      "provider": "wx6aaf93c4435fa1c1"
+    }
+},
+  
+  "permission": {
+    "scope.userLocation": {
+    "desc": "你的位置信息将用于小程序定位"
+  }
+},
+  "window": {
+    "navigationBarBackgroundColor": "#2c2c2c",
+    "navigationBarTextStyle": "white",
+    "navigationStyle": "custom"
+  },
+
+  "tabBar": {
+    "color": "#ffffff",
+    "backgroundColor":"#000000",
+    "list": [
+      {
+        "pagePath": "pages/first/first",
+        "text": "首页",
+        "iconPath": "/images/first.png",
+        "selectedIconPath": "images/first_act.png"
+      },
+    {
+      "pagePath":"pages/search/search",
+      "text":"查找",
+      "iconPath":"images/search.png",
+      "selectedIconPath":"images/search_act.png"
+    },
+    {
+      "pagePath":"pages/message/message",
+      "text":"消息",
+      "iconPath":"images/xiaoxi.png",
+      "selectedIconPath":"images/xiaoxi_act.png"
+    },
+    {
+      "pagePath": "pages/index/index",
+      "text": "我的",
+      "iconPath": "/images/home.png",
+      "selectedIconPath": "images/home_act.png"
+    }
+  ]
+  },
+
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom"
+  },
+  "sitemapLocation": "sitemap.json"
+}

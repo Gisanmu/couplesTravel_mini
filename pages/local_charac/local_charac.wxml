@@ -1,0 +1,3 @@
+<cu-custom bgColor="bg-gray">
+  <view slot="content">当地特色</view>
+</cu-custom>
